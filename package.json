@@ -1,0 +1,27 @@
+{
+  "name": "tc2008b-cw-adla",
+  "version": "1.0.0",
+  "description": "Course material for the Multi-agents and computer graphics course. By the end of the course, you will create a traffic simulation, where each car is an individual agent that has to traverse a city with other cars:",
+  "homepage": "https://github.com/DanAG-Am/TC2008B-CW-ADLA#readme",
+  "bugs": {
+    "url": "https://github.com/DanAG-Am/TC2008B-CW-ADLA/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanAG-Am/TC2008B-CW-ADLA.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lil-gui": "^0.21.0",
+    "twgl": "^7.0.3"
+  }
+}

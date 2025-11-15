@@ -1,3 +1,4 @@
+// 2d Libs trabajado en clase
 /*
  * Functions for 2D transformations
  *
@@ -43,9 +44,10 @@ class M3 {
         let tx = vt[0];
         let ty = vt[1];
        return [
-             1,  0,  tx,
-             0,  1,  ty,
-             0,  0,  1 ];
+             1,  0,  0,
+             0,  1,  0,
+             tx,  ty,  1
+            ];
     }
 
     static rotation(angleRadians) {
@@ -87,18 +89,17 @@ a20 a21 a22            b20 b21 b22
         const mb22 = mb[2 * 3 + 2];
 
         return [
-            ma00 * mb00 + ma01 * mb10 + ma02 * mb20,  
-            ma00 * mb01 + ma01 * mb11 + ma02 * mb21,  
-            ma00 * mb02 + ma01 * mb12 + ma02 * mb22,  
+            ma00 * mb00 + ma10 *mb01 + ma20 * mb02,
+            ma01 * mb00 + ma11 *mb01 + ma21 * mb02,
+            ma02 * mb00 + ma12 *mb01 + ma22 * mb02, 
 
-            ma10 * mb00 + ma11 * mb10 + ma12 * mb20, 
-            ma10 * mb01 + ma11 * mb11 + ma12 * mb21,  
-            ma10 * mb02 + ma11 * mb12 + ma12 * mb22,  
+            ma00 * mb10 + ma10 *mb11 + ma20 * mb12,
+            ma01 * mb10 + ma11 *mb11 + ma21 * mb12,
+            ma02 * mb10 + ma12 *mb11 + ma22 * mb12, 
 
-            ma20 * mb00 + ma21 * mb10 + ma22 * mb20,  
-            ma20 * mb01 + ma21 * mb11 + ma22 * mb21,  
-            ma20 * mb02 + ma21 * mb12 + ma22 * mb22   
-        ];
+            ma00 * mb20 + ma10 *mb21 + ma20 * mb22,
+            ma01 * mb20 + ma11 *mb21 + ma21 * mb22,
+            ma02 * mb20 + ma12 *mb21 + ma22 * mb22]; 
     }
 
 }
